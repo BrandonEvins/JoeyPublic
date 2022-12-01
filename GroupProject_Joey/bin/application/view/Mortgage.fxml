@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="800.0" maxWidth="800.0" prefHeight="800.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.MortgageController">
+   <children>
+      <TextField fx:id="downPayment" layoutX="64.0" layoutY="231.0" promptText="down payment" />
+      <TextField fx:id="escgrow" layoutX="65.0" layoutY="195.0" promptText="yearly escgrow" />
+      <Rectangle fx:id="fadeRectangle" arcHeight="5.0" arcWidth="5.0" height="800.0" strokeType="INSIDE" strokeWidth="0.0" width="800.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0" startX="1.0">
+               <stops>
+                  <Stop color="#093d5b" />
+                  <Stop color="#468189" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+         <stroke>
+            <LinearGradient endX="1.0" endY="1.0" startX="1.0">
+               <stops>
+                  <Stop color="#093d5b" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </stroke>
+      </Rectangle>
+      <Rectangle fx:id="loginRectangle" arcHeight="5.0" arcWidth="5.0" fill="#e7e3db" height="742.0" layoutX="24.0" layoutY="30.0" stroke="#468189" strokeType="INSIDE" strokeWidth="3.0" width="746.0" />
+      <Label fx:id="mortgageLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="100.0" layoutY="30.0" prefHeight="81.0" prefWidth="600.0" text="Your Mortgage" textAlignment="CENTER" textFill="#093d5b" wrapText="true">
+         <font>
+            <Font name="Corbel Bold" size="40.0" />
+         </font>
+      </Label>
+      <LineChart fx:id="mortgageChart" alternativeRowFillVisible="false" animated="false" layoutX="238.0" layoutY="148.0" prefHeight="448.0" prefWidth="499.0" style="-fx-padding: 0;" title="Mortgage Cost in Years">
+        <xAxis>
+          <NumberAxis label="Years" side="BOTTOM" style="-fx-tick-label-font-family: Corbel; -fx-tick-label-font-size: 15;" tickLabelFill="#093d5b" fx:id="xAxis" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis fx:id="yAxis" label="Money" side="LEFT" style="-fx-tick-label-font-family: Corbel; -fx-tick-label-font-size: 15;" tickLabelFill="#093d5b" />
+        </yAxis>
+      </LineChart>
+      <Button fx:id="logoutButton" layoutX="633.0" layoutY="95.0" mnemonicParsing="false" onAction="#handleLogout" prefHeight="44.0" prefWidth="107.0" style="-fx-background-color: #093D5B;" text="Logout" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+         <font>
+            <Font name="Corbel" size="24.0" />
+         </font>
+      </Button>
+      <Label fx:id="usernameLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="633.0" layoutY="49.0" prefHeight="44.0" prefWidth="107.0" text="user" textAlignment="CENTER" textFill="#093d5b" wrapText="true">
+         <font>
+            <Font name="Corbel Bold" size="25.0" />
+         </font>
+      </Label>
+      <Rectangle fx:id="loginRectangle1" arcHeight="5.0" arcWidth="5.0" fill="#e7e3db" height="44.0" layoutX="279.0" layoutY="565.0" stroke="#468189" strokeType="INSIDE" strokeWidth="0.0" width="459.0" />
+      <Rectangle fx:id="loginRectangle2" arcHeight="5.0" arcWidth="5.0" fill="#dad6cd" height="663.0" layoutX="28.0" layoutY="33.0" stroke="#468189" strokeType="INSIDE" strokeWidth="0.0" width="204.0" />
+      <Button fx:id="thirtyyears" layoutX="55.0" layoutY="416.0" mnemonicParsing="false" onAction="#calThirty" prefHeight="35.0" prefWidth="150.0" style="-fx-background-color: #093D5B;" text="Over 30 Years" textFill="WHITE">
+         <font>
+            <Font name="Corbel" size="20.0" />
+         </font></Button>
+      <Button fx:id="fifteenyrs" layoutX="56.0" layoutY="462.0" mnemonicParsing="false" onAction="#calFifteen" prefHeight="35.0" prefWidth="150.0" style="-fx-background-color: #093D5B;" text="Over 15 Years" textFill="WHITE">
+         <font>
+            <Font name="Corbel" size="20.0" />
+         </font></Button>
+      <Label fx:id="toLabel" layoutX="123.0" layoutY="518.0" text="to" textFill="#093d5b">
+         <font>
+            <Font name="Corbel" size="15.0" />
+         </font></Label>
+      <TextField fx:id="startYear" layoutX="56.0" layoutY="514.0" prefHeight="25.0" prefWidth="61.0" promptText="2000" />
+      <TextField fx:id="endYear" layoutX="143.0" layoutY="514.0" prefHeight="25.0" prefWidth="61.0" promptText="2015" />
+      <Button fx:id="customRange" layoutX="55.0" layoutY="563.0" mnemonicParsing="false" onAction="#calRange" prefHeight="25.0" prefWidth="150.0" style="-fx-background-color: #093D5B;" text="Custom Range" textFill="WHITE">
+         <font>
+            <Font name="Corbel" size="20.0" />
+         </font></Button>
+      <Label fx:id="optionsLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="77.0" layoutY="353.0" prefHeight="44.0" prefWidth="107.0" text="options" textAlignment="CENTER" textFill="#093d5b" wrapText="true">
+         <font>
+            <Font name="Corbel" size="25.0" />
+         </font>
+      </Label>
+      <Rectangle fx:id="buttonShadow" arcHeight="5.0" arcWidth="5.0" fill="#3b7da180" height="75.0" layoutX="26.0" layoutY="696.0" stroke="#c9c3b7" strokeType="INSIDE" width="741.0" />
+      <Button fx:id="button_Information" layoutX="100.0" layoutY="709.0" mnemonicParsing="false" onAction="#handle" prefHeight="50.0" prefWidth="250.0" style="-fx-background-color: #093D5B;" text="Information" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+         <font>
+            <Font name="Corbel" size="24.0" />
+         </font>
+      </Button>
+      <Button fx:id="button_Savings_Growth" layoutX="450.0" layoutY="709.0" mnemonicParsing="false" onAction="#handle" prefHeight="50.0" prefWidth="250.0" style="-fx-background-color: #093D5B;" text="Savings &amp; Growth" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+         <font>
+            <Font name="Corbel" size="24.0" />
+         </font>
+      </Button>
+      <Line fx:id="optionDivider" endX="100.0" layoutX="131.0" layoutY="303.0" startX="-105.0" stroke="#9e978a" />
+      <TextField fx:id="loanAmt" layoutX="56.0" layoutY="150.0" prefWidth="150.0" promptText="mortgage amount" />
+      <TextField fx:id="interestRate" layoutX="54.0" layoutY="200.0" prefWidth="150.0" promptText="interest rate" />
+      <Label fx:id="infoLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="77.0" layoutY="85.0" prefHeight="44.0" prefWidth="107.0" text="info" textAlignment="CENTER" textFill="#093d5b" wrapText="true">
+         <font>
+            <Font name="Corbel" size="25.0" />
+         </font>
+      </Label>
+      <Label fx:id="monthlyPayment" alignment="CENTER" contentDisplay="CENTER" layoutX="300.0" layoutY="590.0" prefHeight="44.0" prefWidth="418.0" text="Monthly Payments: $1000" textAlignment="CENTER" textFill="#093d5b" wrapText="true">
+         <font>
+            <Font name="Corbel" size="25.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

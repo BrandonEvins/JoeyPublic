@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="800.0" maxWidth="800.0" prefHeight="800.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.InformationController">
+   <children>
+      <Rectangle fx:id="fadeRectangle" arcHeight="5.0" arcWidth="5.0" height="800.0" strokeType="INSIDE" strokeWidth="0.0" width="800.0">
+         <stroke>
+            <LinearGradient endX="1.0" endY="1.0" startX="1.0">
+               <stops>
+                  <Stop color="#093d5b" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </stroke>
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0" startX="1.0">
+               <stops>
+                  <Stop color="#093d5b" />
+                  <Stop color="#468189" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <Rectangle fx:id="loginRectangle" arcHeight="5.0" arcWidth="5.0" fill="#e7e3db" height="742.0" layoutX="24.0" layoutY="30.0" stroke="#468189" strokeType="INSIDE" strokeWidth="3.0" width="746.0" />
+      <Rectangle fx:id="loginRectangle1" arcHeight="5.0" arcWidth="5.0" fill="#dad6cd" height="99.0" layoutX="27.0" layoutY="600.0" stroke="#468189" strokeType="INSIDE" strokeWidth="0.0" width="740.0" />
+      <Label fx:id="financesLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="100.0" layoutY="30.0" prefHeight="81.0" prefWidth="600.0" text="Your Finances" textAlignment="CENTER" textFill="#081544" wrapText="true">
+         <font>
+            <Font name="Corbel Bold" size="40.0" />
+         </font>
+      </Label>
+      <Label fx:id="usernameLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="633.0" layoutY="49.0" prefHeight="44.0" prefWidth="107.0" text="user" textAlignment="CENTER" textFill="#093d5b" wrapText="true">
+         <font>
+            <Font name="Corbel Bold" size="25.0" />
+         </font>
+      </Label>
+      <TextField fx:id="valueText" layoutX="54.0" layoutY="624.0" promptText="Value" />
+      <TextField fx:id="descriptionText" layoutX="248.0" layoutY="624.0" prefHeight="25.0" prefWidth="225.0" promptText="Description" />
+      <Button fx:id="addCredit" layoutX="493.0" layoutY="611.0" mnemonicParsing="false" onAction="#handle" prefHeight="31.0" prefWidth="118.0" style="-fx-background-color: #093D5B;" text="Add Credit" textFill="WHITE">
+         <font>
+            <Font name="Corbel" size="15.0" />
+         </font></Button>
+      <Button fx:id="addDebit" layoutX="623.0" layoutY="611.0" mnemonicParsing="false" onAction="#handle" prefHeight="31.0" prefWidth="118.0" style="-fx-background-color: #093D5B;" text="Add Debit" textFill="WHITE">
+         <font>
+            <Font name="Corbel" size="15.0" />
+         </font></Button>
+      <Button fx:id="saveData" layoutX="54.0" layoutY="95.0" mnemonicParsing="false" onAction="#handle" prefHeight="44.0" style="-fx-background-color: #093D5B;" text="Save Data" textFill="WHITE">
+         <font>
+            <Font name="Corbel" size="24.0" />
+         </font></Button>
+      <Button fx:id="removeCredit" layoutX="493.0" layoutY="649.0" mnemonicParsing="false" onAction="#handle" prefHeight="31.0" prefWidth="118.0" style="-fx-background-color: #093D5B;" text="Remove Credit" textFill="WHITE">
+         <font>
+            <Font name="Corbel" size="15.0" />
+         </font></Button>
+      <Button fx:id="removeDebit" layoutX="623.0" layoutY="649.0" mnemonicParsing="false" onAction="#handle" prefHeight="31.0" prefWidth="118.0" style="-fx-background-color: #093D5B;" text="Remove Debit" textFill="WHITE">
+         <font>
+            <Font name="Corbel" size="15.0" />
+         </font></Button>
+      <Rectangle fx:id="buttonShadow" arcHeight="5.0" arcWidth="5.0" fill="#3b7da180" height="75.0" layoutX="27.0" layoutY="696.0" stroke="#c9c3b7" strokeType="INSIDE" strokeWidth="0.0" width="741.0" />
+      <Button fx:id="button_Mortgage" layoutX="100.0" layoutY="708.0" mnemonicParsing="false" onAction="#handle" prefHeight="50.0" prefWidth="250.0" style="-fx-background-color: #093D5B;" text="Mortgage" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+         <font>
+            <Font name="Corbel" size="24.0" />
+         </font>
+      </Button>
+      <Button fx:id="button_Savings_Growth" layoutX="450.0" layoutY="709.0" mnemonicParsing="false" onAction="#handle" prefHeight="50.0" prefWidth="250.0" style="-fx-background-color: #093D5B;" text="Savings &amp; Growth" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+         <font>
+            <Font name="Corbel" size="24.0" />
+         </font>
+      </Button>
+      <Button fx:id="logoutButton" layoutX="633.0" layoutY="95.0" mnemonicParsing="false" onAction="#handleLogout" prefHeight="44.0" prefWidth="107.0" style="-fx-background-color: #093D5B;" text="Logout" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+         <font>
+            <Font name="Corbel" size="24.0" />
+         </font>
+      </Button>
+      <Label fx:id="creditsLabel" alignment="TOP_LEFT" layoutX="54.0" layoutY="198.0" prefHeight="375.0" prefWidth="340.0" style="-fx-border-color: #093D5B;" text="Test" textFill="#093d5b">
+         <font>
+            <Font name="Corbel" size="22.0" />
+         </font></Label>
+      <Label fx:id="debitsLabel" alignment="TOP_LEFT" layoutX="400.0" layoutY="198.0" prefHeight="375.0" prefWidth="340.0" style="-fx-border-color: #093D5B;" text="Test" textFill="#093d5b">
+         <font>
+            <Font name="Corbel" size="22.0" />
+         </font></Label>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="172.0" layoutY="154.0" prefHeight="44.0" prefWidth="107.0" text="Credits" textAlignment="CENTER" textFill="#093d5b" wrapText="true">
+         <font>
+            <Font name="Corbel Bold" size="25.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="517.0" layoutY="154.0" prefHeight="44.0" prefWidth="107.0" text="Debits" textAlignment="CENTER" textFill="#093d5b" wrapText="true">
+         <font>
+            <Font name="Corbel Bold" size="25.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
